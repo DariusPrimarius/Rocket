@@ -29,6 +29,7 @@ import java.util.List;
 class Game extends SurfaceView implements SurfaceHolder.Callback {
 
     private final Tilemap tilemap;
+    private final Tilemap tilemap2;
     private int joystickPointerId = 0;
     private final Joystick joystick;
     private final Player player;
@@ -56,8 +57,8 @@ class Game extends SurfaceView implements SurfaceHolder.Callback {
         gameOver = new GameOver(context);
         joystick = new Joystick((int) (displayMetrics.widthPixels * 0.8),
                 (int) (displayMetrics.heightPixels * 0.7),
-                (int) (displayMetrics.widthPixels * 0.05),
-                (int) (displayMetrics.heightPixels * 0.02));
+                (int) (displayMetrics.widthPixels * 0.08),
+                (int) (displayMetrics.heightPixels * 0.03));
 
         // Initialize game objects
         SpriteSheet spriteSheet = new SpriteSheet(context);
@@ -69,6 +70,7 @@ class Game extends SurfaceView implements SurfaceHolder.Callback {
 
         // Initialize Tilemap
         tilemap = new Tilemap(spriteSheet);
+        tilemap2 = new Tilemap(spriteSheet);
 
         setFocusable(true);
     }

@@ -67,6 +67,24 @@ public class Tilemap {
     public void draw(Canvas canvas, GameDisplay gameDisplay) {
         canvas.drawBitmap(
                 mapBitmap,
+                gameDisplay.getGameRect4(),
+                gameDisplay.DISPLAY_RECT,
+                null
+        );
+        canvas.drawBitmap(
+                mapBitmap,
+                gameDisplay.getGameRect3(),
+                gameDisplay.DISPLAY_RECT,
+                null
+        );
+        canvas.drawBitmap(
+                mapBitmap,
+                gameDisplay.getGameRect2(),
+                gameDisplay.DISPLAY_RECT,
+                null
+        );
+        canvas.drawBitmap(
+                mapBitmap,
                 gameDisplay.getGameRect(),
                 gameDisplay.DISPLAY_RECT,
                 null

@@ -53,11 +53,15 @@ public class Animator {
 
     public void drawFrame(Canvas canvas, GameDisplay gameDisplay, Player player, Sprite sprite, Joystick joystick) {
         canvas.save();
-        canvas.rotate((float) joystick.getAngle(),(float) gameDisplay.gameToDisplayCoordinatesX(player.getPositionX()),(float) gameDisplay.gameToDisplayCoordinatesY(player.getPositionY()));
+        canvas.scale((float) 0.2,(float) 0.2);
+        canvas.rotate(
+                (float) joystick.getAngle(),
+                (float) gameDisplay.gameToDisplayCoordinatesX(player.getPositionX())*5,
+                (float) gameDisplay.gameToDisplayCoordinatesY(player.getPositionY())*5);
         sprite.draw(
                 canvas,
-                (int) gameDisplay.gameToDisplayCoordinatesX(player.getPositionX()) - sprite.getWidth()/2,
-                (int) gameDisplay.gameToDisplayCoordinatesY(player.getPositionY()) - sprite.getHeight()/2
+                (int) gameDisplay.gameToDisplayCoordinatesX(player.getPositionX())*5 - sprite.getWidth()/2,
+                (int) gameDisplay.gameToDisplayCoordinatesY(player.getPositionY())*5 - sprite.getHeight()/2
         );
         canvas.restore();
     }

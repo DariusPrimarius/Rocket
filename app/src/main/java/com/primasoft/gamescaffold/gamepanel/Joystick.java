@@ -19,7 +19,7 @@ public class Joystick {
     private boolean isPressed = false;
     private double joystickCenterToTouchDistance;
     private double actuatorX;
-    private double actuatorY;
+    private double actuatorY = -1;
     double actuatorInnerCircleX;
     double actuatorInnerCircleY;
     private double touchPositionX=1;

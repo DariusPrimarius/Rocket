@@ -6,7 +6,7 @@ import com.primasoft.gamescaffold.GameLoop;
 import com.primasoft.gamescaffold.R;
 
 public class Spell extends Circle {
-    public static final double SPEED_PIXELS_PER_SECOND = 800.0;
+    public static final double SPEED_PIXELS_PER_SECOND = 4000.0;
     private static final double MAX_SPEED = SPEED_PIXELS_PER_SECOND / GameLoop.MAX_UPS;
 
     public Spell(Context context, Player spellcaster, int radius) {
